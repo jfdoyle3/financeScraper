@@ -8,33 +8,35 @@ using System.Data.SqlClient;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
 using Selenium;
+
+
 namespace financeScraper
 {
     public class ListConverter
     {
-        public static void ListToItem(List<HtmlNode> stockList)
-        {
-            List<String> stockHtml = new List<string>();
-            List<String> stockText = new List<string>();
-            Array[,] sTable = new Array[12,14];
-            foreach (HtmlNode node in stockList)
-            {
-                stockHtml.Add(node.InnerHtml);
-                stockText.Add(node.InnerText);
+        //public static void ListToItem(List<HtmlNode> stockList)
+        //{
+        //    List<String> stockHtml = new List<string>();
+        //    List<String> stockText = new List<string>();
+        //    Array[,] sTable = new Array[12,14];
+        //    foreach (HtmlNode node in stockList)
+        //    {
+        //        stockHtml.Add(node.InnerHtml);
+        //        stockText.Add(node.InnerText);
             
-            }
-            //foreach (var item in stockText)
-            //    Console.Write("{0}, ",item);
-            string html = String.Join("", stockHtml);
-            string text = String.Join(",", stockText);
+        //    }
+        //    //foreach (var item in stockText)
+        //    //    Console.Write("{0}, ",item);
+        //    string html = String.Join("", stockHtml);
+        //    string text = String.Join(",", stockText);
 
-            string[] stockRow = text.Split(",");
-            string[] result = new string[14];
-            sTable[0,0]=ParseList(stockRow);
-            for (int v = 0; v < 14; v++)
-            {
-                Console.WriteLine(sTable[0, v]);
-            }
+        //    string[] stockRow = text.Split(",");
+        //    string[] result = new string[14];
+        //    sTable[0,0]=ParseList(stockRow);
+        //    for (int v = 0; v < 14; v++)
+        //    {
+        //        Console.WriteLine(sTable[0, v]);
+        //    }
             // 16 places per row
             //int count = 0;
             //for (int rows = 0; rows < 12; rows++)
@@ -75,7 +77,7 @@ namespace financeScraper
 
             // return stockRow;
 
-        }
+      //  }
         public static string[] ParseList(string[] data)
         {
             string[] rowdata = new string[14];
