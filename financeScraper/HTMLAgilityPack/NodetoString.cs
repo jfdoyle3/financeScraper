@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using HtmlAgilityPack;
 using Selenium;
 
-namespace WebScraper
+namespace financeScraper
 {
     public class NodetoString : Export
     {

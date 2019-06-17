@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 using System.Linq;
 
 
-namespace WebScraper
+namespace financeScraper
 {
     class ScrapedDatabase
     {
@@ -19,10 +19,10 @@ namespace WebScraper
 
 
             // HAL9000
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repository\webScraper\dotNET\webScraper.dotNet\webScraper\ScrapedData.mdf;Integrated Security=True";
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repository\financeScraper\dotNET\financeScraper.dotNet\financeScraper\ScrapedData.mdf;Integrated Security=True";
 
             // Amuzement
-            //string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\repository\webScraper\dotNET\webScraper.dotNet\webScraper\ScrapeDB.mdf; Integrated Security = True";
+            //string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\repository\financeScraper\dotNET\financeScraper.dotNet\financeScraper\ScrapeDB.mdf; Integrated Security = True";
 
           SqlConnection  cnn = new SqlConnection(connectionString);
 
@@ -52,7 +52,7 @@ namespace WebScraper
         //    string connectionString;
         //    SqlConnection cnn;
 
-        //    connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repository\webScraper\dotNET\webScraper.dotNet\webScraper\ScrapeDB.mdf;Integrated Security=True";
+        //    connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repository\financeScraper\dotNET\financeScraper.dotNet\financeScraper\ScrapeDB.mdf;Integrated Security=True";
 
         //    cnn = new SqlConnection(connectionString);
 

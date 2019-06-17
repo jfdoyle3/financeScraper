@@ -7,7 +7,7 @@ using System.Linq;
 using System.Data;
 
 
-namespace WebScraper
+namespace financeScraper
 {
     class FromFile : Export
     {

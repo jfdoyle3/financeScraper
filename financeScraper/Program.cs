@@ -11,7 +11,7 @@ using HtmlAgilityPack;
 using Selenium;
 using System.Xml;
 
-namespace WebScraper
+namespace financeScraper
 {
     class Program
     {

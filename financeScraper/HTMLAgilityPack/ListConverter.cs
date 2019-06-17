@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
 using Selenium;
-namespace WebScraper
+namespace financeScraper
 {
     public class ListConverter
     {

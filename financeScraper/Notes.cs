@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WebScraper
+namespace financeScraper
 {
     class Notes
     {

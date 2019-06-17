@@ -4,7 +4,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using HtmlAgilityPack;
 
-namespace WebScraper
+namespace financeScraper
 {
    // Regex for 3 character Upper - Symbol
    // /(.*[A-Z]){3}/i

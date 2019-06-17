@@ -6,7 +6,7 @@ using OpenQA.Selenium.Support.UI;
 using HtmlAgilityPack;
 using System.IO;
 using System.Linq;
-using WebScraper;
+using financeScraper;
 
 namespace Selenium
 {

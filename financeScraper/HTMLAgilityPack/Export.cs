@@ -10,11 +10,11 @@ using System.Linq;
 
 
 
-namespace WebScraper
+namespace financeScraper
 {
     public class Export
     {
-        private String Folder = @"D:\repository\webScraper\dotNET\";
+        private String Folder = @"D:\repository\financeScraper\dotNET\";
         private String FileName = "Output.txt";
         
         
@@ -61,10 +61,10 @@ namespace WebScraper
             // Connect and Open Database
             //
             // HAL900
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repository\webScraper\dotNET\webScraper.dotNet\webScraper\ScrapedData.mdf;Integrated Security=True";
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repository\financeScraper\dotNET\financeScraper.dotNet\financeScraper\ScrapedData.mdf;Integrated Security=True";
 
             // Amuzement
-            //string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\repository\webScraper\dotNET\webScraper.dotNet\webScraper\ScrapedData.mdf;Integrated Security=True";
+            //string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\repository\financeScraper\dotNET\financeScraper.dotNet\financeScraper\ScrapedData.mdf;Integrated Security=True";
             // TODO: Write tsble headers to database table
 
             SqlConnection dbConnect = new SqlConnection(connectionString);
@@ -94,10 +94,10 @@ namespace WebScraper
         //public void InsertDatabase()
         //{
         //    // HAL900
-        //    string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repository\webScraper\dotNET\webScraper.dotNet\webScraper\ScrapedData.mdf;Integrated Security=True";
+        //    string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repository\financeScraper\dotNET\financeScraper.dotNet\financeScraper\ScrapedData.mdf;Integrated Security=True";
 
         //    // Amuzement
-        //    //string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\repository\webScraper\dotNET\webScraper.dotNet\webScraper\ScrapeDB.mdf; Integrated Security = True";
+        //    //string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\repository\financeScraper\dotNET\financeScraper.dotNet\financeScraper\ScrapeDB.mdf; Integrated Security = True";
         //    SqlConnection cnn = new SqlConnection(connectionString);
         //    cnn.Open();
 
@@ -126,10 +126,10 @@ namespace WebScraper
             //This Works
         {
             // HAL900
-             string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repository\webScraper\dotNET\webScraper.dotNet\webScraper\ScrapedData.mdf;Integrated Security=True";
+             string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repository\financeScraper\dotNET\financeScraper.dotNet\financeScraper\ScrapedData.mdf;Integrated Security=True";
 
             // Amuzement
-            //string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\repository\webScraper\dotNET\webScraper.dotNet\webScraper\ScrapedData.mdf;Integrated Security=True";
+            //string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\repository\financeScraper\dotNET\financeScraper.dotNet\financeScraper\ScrapedData.mdf;Integrated Security=True";
 
             string[] fields ={ "@Symbol", "@LastPrice", "@Change", "@ChgPc", "@Currency", "@MarketTime", "@Volume", "@Shares", "@AvgVol3m", "@DayRange", "@Wk52Range", "@DayChart", "@MarketCap"};
             // string[] data = new string[13];
