@@ -19,12 +19,12 @@ namespace financeScraper
         {
 
             // Automated Yahoo Login - inherited classes
-            // YahooFinance yf = new YahooFinance();
-            // List<HtmlNode> stockTable = yf.Login();
+            //YahooFinance yf = new YahooFinance();
+            //List<HtmlNode> stockTable = yf.Login();
 
             // From File
-            FromFile scrape = new FromFile();
-            List<HtmlNode> yFinance = scrape.ReadFile();
+             FromFile scrape = new FromFile();
+              List<HtmlNode> yFinance = scrape.ReadFile();
 
             // new code below here
             //
@@ -34,25 +34,28 @@ namespace financeScraper
 
 
 
+            //NodetoString tableData = new NodetoString();
+            //tableData.StringNode(yFinance);
+            //string html = tableData.StringNode(yFinance);
 
-            NodetoString tableData = new NodetoString();
-            tableData.StringNode(yFinance);
-            string html = tableData.StringNode(yFinance);
+            //HtmlDocument htmlDoc = new HtmlDocument();
+            //htmlDoc.LoadHtml(html);
 
-            HtmlDocument htmlDoc = new HtmlDocument();
-            htmlDoc.LoadHtml(html);
+            //// // "/th"                        = Table Headers
+            //// // "/td[@aria-label='Symbol']"  = Data Columns
 
-            // // "/th"                        = Table Headers
-            // // "/td[@aria-label='Symbol']"  = Data Columns
+            //List<HtmlNode> headers = htmlDoc.DocumentNode
+            //                                .SelectNodes("//tr")
+            //                                .ToList();
+            //string[] headers = { "Symbol" };
+            //List<HtmlNode> stockData = htmlDoc.DocumentNode
+            //                                  .SelectNodes("//td[@aria-label='"+headers[0]+"']")
+            //                                  .ToList();
 
-            // List<HtmlNode> headers = htmlDoc.DocumentNode
-            //                                 .SelectNodes("//tr")
-            //                                 .ToList();
-            List<HtmlNode> stockData = htmlDoc.DocumentNode
-                                              .SelectNodes("//td")
-                                              .ToList();
+            //foreach (var item in headers)
+            //    Console.WriteLine(item.InnerText);
             // dynamic result=tableData.NodesToTable(stockData);
-            NodetoString.NodesToTable(stockData);
+            // NodetoString.NodesToTable(stockData);
             //scrape.ViewDataTable(result);
             //scrape.ToDatabase(result);
 

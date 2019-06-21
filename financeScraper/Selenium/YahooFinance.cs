@@ -56,7 +56,7 @@ namespace Selenium
 
                 foreach (HtmlNode node in stockTable)
                 {
-                    Console.WriteLine(node.InnerText.ToString());
+                    Console.WriteLine(node.InnerText);
                 }
                 return stockTable;
  

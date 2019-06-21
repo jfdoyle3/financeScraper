@@ -140,14 +140,14 @@ namespace financeScraper
             //}
 
 
-             string[] stockData = { "int", "$1.23", "-0.15", "+1.23", "USD", "4:00pm", "5.5b", "32", "34.65m", "3-5", "4-7", "chart", "100b", "buy/sell" };
+             string[] stockData = { "AMD", "$1.23", "-0.15", "+1.23", "USD", "4:00pm", "5.5b", "32", "34.65m", "3-5", "4-7", "chart", "100b", "buy/sell" };
 
             //    Console.WriteLine("f:{0} | d:{1}", fields.Length, data.Length);
 
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                String query = "INSERT INTO zTable (Symbol,LastPrice,Change,ChgPc,Currency,MarketTime,Volume,Shares,AvgVol3m,DayRange,Wk52Range,DayChart,MarketCap) VALUES (@Symbol,@LastPrice,@Change,@ChgPc,@Currency,@MarketTime,@Volume,@Shares,@AvgVol3m,@DayRange,@Wk52Range,@DayChart,@MarketCap)";
+                String query = "INSERT INTO yTable (Symbol,LastPrice,Change,ChgPc,Currency,MarketTime,Volume,Shares,AvgVol3m,DayRange,Wk52Range,DayChart,MarketCap) VALUES (@Symbol,@LastPrice,@Change,@ChgPc,@Currency,@MarketTime,@Volume,@Shares,@AvgVol3m,@DayRange,@Wk52Range,@DayChart,@MarketCap)";
 
 
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -174,7 +174,7 @@ namespace financeScraper
 
                     //        //}
 
-                    command.Parameters.AddWithValue("@Symbol", stockData[0]);
+            command.Parameters.AddWithValue("@Symbol", stockData[0]);
             command.Parameters.AddWithValue("@LastPrice", stockData[1]);
             command.Parameters.AddWithValue("@Change", stockData[2]);
             command.Parameters.AddWithValue("@ChgPc", stockData[3]);
