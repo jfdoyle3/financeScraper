@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using HtmlAgilityPack;
 using Selenium;
 using System.Xml;
+using Entityframework;
 
 namespace financeScraper
 {
@@ -19,8 +20,8 @@ namespace financeScraper
         {
 
             // Automated Yahoo Login - inherited classes
-            YahooFinance yf = new YahooFinance();
-            List<HtmlNode> stockTable = yf.Login();
+            //YahooFinance yf = new YahooFinance();
+            //List<HtmlNode> stockTable = yf.Login();
 
             // From File
             //FromFile scrape = new FromFile();
@@ -30,7 +31,7 @@ namespace financeScraper
             //
 
 
-
+            EntityFirstCode.RunSample();
 
 
 

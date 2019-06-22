@@ -96,7 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTPrint.cs" />
-    <Compile Include="Entity\CodeFirst.cs" />
+    <Compile Include="Entity\CodeFirstSample.cs" />
     <Compile Include="HTMLAgilityPack\Export.cs" />
     <Compile Include="HTMLAgilityPack\FromFile.cs" />
     <Compile Include="HTMLAgilityPack\ListConverter.cs" />
