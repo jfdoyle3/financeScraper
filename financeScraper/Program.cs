@@ -29,10 +29,10 @@ namespace financeScraper
 
             // new code below here
             //
-            int i = 0;
-            for (int j=0; j<15; j++)
-            Console.Write("{0}, ",yFinance[i][j].ToString());
-
+            //int i = 0;
+            //for (int j=0; j<15; j++)
+            //Console.Write("{0}, ",yFinance[i][j].ToString());
+            //Console.WriteLine(yFinance[1].Count.ToString());
             //  FinanceDB.DataToTable();
 
 
