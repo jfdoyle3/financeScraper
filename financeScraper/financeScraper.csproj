@@ -97,6 +97,7 @@
   <ItemGroup>
     <Compile Include="DTPrint.cs" />
     <Compile Include="Entity\CodeFirstSample.cs" />
+    <Compile Include="Entity\FinanceDB.cs" />
     <Compile Include="HTMLAgilityPack\Export.cs" />
     <Compile Include="HTMLAgilityPack\FromFile.cs" />
     <Compile Include="HTMLAgilityPack\ListConverter.cs" />
@@ -112,15 +113,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="FinanceData.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FinanceData_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>FinanceData.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

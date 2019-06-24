@@ -31,7 +31,7 @@ namespace financeScraper
             //
 
 
-            EntityFirstCode.RunSample();
+            FinanceDB.DataToTable();
 
 
 
