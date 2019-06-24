@@ -12,7 +12,7 @@ namespace Selenium
     public class YahooFinance : ListNode
     {
 
-       public List<HtmlNode> Login()
+       public List<List<string>> Login()
         {
             using (IWebDriver driver = new ChromeDriver())
             {
@@ -48,15 +48,24 @@ namespace Selenium
 
                 HtmlDocument financePage = new HtmlDocument();
                 financePage.LoadHtml(driver.PageSource);
+                // "//table[@class='" + className + "']")
 
-                List<HtmlNode> stockTable = financePage.DocumentNode
-                                                .SelectNodes("//tr")
-                                                .ToList();
+                List<List<string>> stockTable =
+                                    financePage.DocumentNode.SelectSingleNode("//table")
+                                                            .Descendants("tr")
+                                                            .Skip(1) //To Skip Table Header Row
+                                                            .Where(tr => tr.Elements("td").Count() > 1)
+                                                            .Select(tr => tr.Elements("td").Select(td => td.InnerText.Trim()).ToList())
+                                                            .ToList();
 
-                foreach (HtmlNode node in stockTable)
-                {
-                    Console.WriteLine(node.InnerText);
-                }
+                //List<HtmlNode> stockTable = financePage.DocumentNode
+                //                                .SelectNodes("//tr")
+                //                                .ToList();
+
+                //foreach (HtmlNode node in stockTable)
+                //{
+                //    Console.WriteLine(node.InnerText);
+                //}
                 return stockTable;
  
             }

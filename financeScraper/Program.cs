@@ -21,17 +21,19 @@ namespace financeScraper
 
             // Automated Yahoo Login - inherited classes
             //YahooFinance yf = new YahooFinance();
-            //List<HtmlNode> stockTable = yf.Login();
+            //List<List<string>> stockTable = yf.Login();
 
             // From File
-            //FromFile scrape = new FromFile();
-            // List<HtmlNode> yFinance = scrape.ReadFile();
+            FromFile scrape = new FromFile();
+            List<List<string>> yFinance = scrape.ReadFile();
 
             // new code below here
             //
+            int i = 0;
+            for (int j=0; j<15; j++)
+            Console.Write("{0}, ",yFinance[i][j].ToString());
 
-
-            FinanceDB.DataToTable();
+            //  FinanceDB.DataToTable();
 
 
 
