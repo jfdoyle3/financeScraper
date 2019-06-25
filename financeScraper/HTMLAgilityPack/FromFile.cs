@@ -49,7 +49,17 @@ namespace financeScraper
             //}
             //while (count < 4);
 
+            for (int row = 0; row < stockTable.Count; row++)
+            {
+                for (int col = 0; col < stockTable[0].Count; col++)
+                {
+                     if (col%15==0)
+                        Console.WriteLine();
+                    Console.Write("{0},",stockTable[row][col].ToString());
 
+                }
+            }
+            
 
             return stockTable;
         }

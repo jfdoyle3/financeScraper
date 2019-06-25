@@ -33,9 +33,11 @@ namespace financeScraper
             //for (int j=0; j<15; j++)
             //Console.Write("{0}, ",yFinance[i][j].ToString());
             //Console.WriteLine(yFinance[1].Count.ToString());
+
+
             //  FinanceDB.DataToTable();
-
-
+            Console.WriteLine();
+            Console.WriteLine(yFinance.ToString());
 
             //NodetoString tableData = new NodetoString();
             //tableData.StringNode(yFinance);

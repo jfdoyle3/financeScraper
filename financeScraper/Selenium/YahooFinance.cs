@@ -12,7 +12,7 @@ namespace Selenium
     public class YahooFinance : ListNode
     {
 
-       public List<List<string>> Login()
+       public static void Login()
         {
             using (IWebDriver driver = new ChromeDriver())
             {
@@ -22,7 +22,7 @@ namespace Selenium
                 waitSignIn.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.Id("uh-signedin")));
 
                 IWebElement signIn = driver.FindElement(By.Id("uh-signedin"));
-                 signIn.Click();
+                signIn.Click();
 
                 WebDriverWait waitLogin = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
                 waitLogin.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.Id("login-username")));
@@ -48,12 +48,12 @@ namespace Selenium
 
                 HtmlDocument financePage = new HtmlDocument();
                 financePage.LoadHtml(driver.PageSource);
-                // "//table[@class='" + className + "']")
+             
 
                 List<List<string>> stockTable =
                                     financePage.DocumentNode.SelectSingleNode("//table")
                                                             .Descendants("tr")
-                                                            .Skip(1) //To Skip Table Header Row
+                                                            .Skip(1)
                                                             .Where(tr => tr.Elements("td").Count() > 1)
                                                             .Select(tr => tr.Elements("td").Select(td => td.InnerText.Trim()).ToList())
                                                             .ToList();
@@ -62,14 +62,19 @@ namespace Selenium
                 //                                .SelectNodes("//tr")
                 //                                .ToList();
 
-                //foreach (HtmlNode node in stockTable)
-                //{
-                //    Console.WriteLine(node.InnerText);
-                //}
-                return stockTable;
+               for(int row=0; row<stockTable.Count; row++)
+                {
+                    for (int col=0; col<stockTable[0].Count; col++)
+                    {
+                        Console.WriteLine(stockTable[row][col].ToString());
+                    }
+                
+                }
+                   
+                }
+              //  return stockTable;
  
             }
        }
       
     }
-}

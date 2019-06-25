@@ -27,24 +27,26 @@ namespace Entityframework
 
                 for (int i = 0; i < stockTable.Count; i++)
                 {
-                    for (int j=0; j<stockTable[0].Count; j++)
-                    { 
+                    
                     FinanceTable financeTable = new FinanceTable
                     {
                         ID = DateTime.Now,
-                        Symbol = symbol,
-                        LastPrice = lastPrice,
-                        Change = change,
-                        ChgPc = chgPc,
-                        Currency = currency,
-                        MarketTime = martkettime,
-                        Volume = volume,
-                        Shares = shares,
-                        AvgVol3m = avgVol3m,
-                        DayRange = dayRange,
-                        Wk52Range = wk52Range,
-                        DayChart = dayChart,
-                        MarketCap = marketCap
+                        //Symbol = stockTable[x][xx],
+                        //LastPrice = stockTable[x][xx],
+                        //Change = stockTable[x][xx],
+                        //ChgPc = stockTable[x][xx],
+                        //Currency = stockTable[x][xx],
+                        //MarketTime = stockTable[x][xx],
+                        //Volume = stockTable[x][xx],
+                        //Shares = stockTable[x][xx],
+                        //AvgVol3m = stockTable[x][xx],
+                        //DayRange = stockTable[x][xx],
+                        //Wk52Range = stockTable[x][xx],
+                        //DayChart = stockTable[x][xx],
+                        //MarketCap = stockTable[x][xx],
+                        //Field1 = stockTable[x][xx],
+                        //Field2 = stockTable[x][xx],
+                        //Field3 = stockTable[x][xx]
                     };
 
                     db.FinanceTables.Add(financeTable);
@@ -87,6 +89,11 @@ namespace Entityframework
         public string Wk52Range { get; set; }
         public string DayChart { get; set; }
         public string MarketCap { get; set; }
+        public string Field1 { get; set; }
+        public string Field2 { get; set; }
+        public string Field3 { get; set; }
+
+
 
     }
 
